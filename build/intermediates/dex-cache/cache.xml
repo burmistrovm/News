@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_84a321182a8ceb0d17403d8032ffefd619b99a10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_9fbe9d63f6dd23713fcf3f2560d5974f06a96709.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_525858b6d576c750306fd153271a151e66b797cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/okio-1.9.0_dd293d6ba607afe89287b7ce681e58f6ce0697d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_0cc12b5f784c7fb3e72726f3025b5e5c84d72425.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e8d9c827826882dabe348234fa5b45f4f4687020">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e79da24d5999029c7c30647bb93f37ca8b8c6cfe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/gson-2.7_a307139ece07bc7d4bc3f78b7d4e2ae049256714.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/okhttp-3.4.1_ffcfce01a332c30a5faebea4cee3be5140ce8f36.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_911305f08413f2cd4b3fe60911fd50c0fff8ecce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_6819098edf3bad25df8e98a00f58094e7d2a0081.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_f5cf1c278bb012cb4cc149cae5bd431fdf8a4d5d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_ddee5e53db167b3171b577fa7368de4a2bef6d22.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_f261037de8b14c6a6131d5bde602cd816371be55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="792a0832378b62c29bea1825fb34b62a2c50eb17">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/instant-run_f77813a33b107eece5acff28ce59ad5d72b4d198.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_20b82cb279f77822c0120a57962d291db5c99ddf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_f13a59bdffcc5c7156db36549f2ad117f7f834a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_95fc02be509aa5ec1d8f9b733c51d0b71f2b532e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_df598035193c1557d4638b89c368e63fa2e41506.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/libs/news_lib.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa90fbe03089a0b6169c2ebb719a6d26e5c76d69">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/news_lib_88b10883b976a46f58960bd746c00a454fe9a8ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_1a2fb0e6a48da0a846c0e37b538dd64ec05bb9c9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/mike/News/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_1bbb5ed27c56fc0909ccb61e3f430bf197f493ff.jar" />
+    </item>
+
+</items>
