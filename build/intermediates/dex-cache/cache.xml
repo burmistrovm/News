@@ -52,7 +52,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="e8d9c827826882dabe348234fa5b45f4f4687020">
+        sha1="4456205240a9d1e3a658479e95d381b557fcee31">
         <dex dex="/home/mike/News/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e79da24d5999029c7c30647bb93f37ca8b8c6cfe.jar" />
     </item>
     <item

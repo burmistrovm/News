@@ -1,45 +1,40 @@
 package com.project.mike.news.Activities;
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
+import java.text.SimpleDateFormat;
 import android.widget.TextView;
 import android.widget.Button;
-import android.os.StrictMode;
+
+import com.project.mike.news.NewsResultReceiver;
 import com.project.mike.news.R;
 import ru.mail.weather.lib.Storage;
 import ru.mail.weather.lib.News;
 import android.content.Intent;
 import android.content.IntentFilter;
-import com.project.mike.news.NewsResultListener;
+import com.project.mike.news.Services.ServiceHelper.NewsResultListener;
 import com.project.mike.news.Services.ServiceHelper;
+import java.util.Locale;
+import ru.mail.weather.lib.Scheduler;
+import com.project.mike.news.Services.NewsIntentService;
 
 public class MainActivity extends AppCompatActivity implements NewsResultListener {
     private final static String TAG = MainActivity.class.getSimpleName();
     private int requestId;
-    private TextView resultTextView;
-    private Storage storage;
-
-    static {
-        StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()
-                .detectActivityLeaks()
-                .penaltyLog()
-                .penaltyDeath()
-                .build()
-        );
-    }
-
+    private static Storage storage;
     @Override
     protected void onCreate(Bundle savedInstanceState)  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        resultTextView = (TextView) findViewById(R.id.news_text);
         TextView topicTextView = (TextView) findViewById(R.id.topic_text);
         storage = Storage.getInstance(this);
         String currentTopic = storage.loadCurrentTopic();
-        if (currentTopic == "")
+        if (currentTopic == "") {
             currentTopic = "it";
+            storage.saveCurrentTopic("it");
+        }
         topicTextView.setText(currentTopic);
         Button startActivity = (Button) findViewById(R.id.btn_start_activity);
         startActivity.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +68,7 @@ public class MainActivity extends AppCompatActivity implements NewsResultListene
             }
         });
 
+        refresh();
 
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_SCREEN_ON);
@@ -105,31 +101,37 @@ public class MainActivity extends AppCompatActivity implements NewsResultListene
 
     private void refresh() {
         if (requestId == 0) {
-            requestId = ServiceHelper.getInstance().getNews(this, storage.loadCurrentTopic(), this);
+            requestId = ServiceHelper.getInstance().getNews(this, this);
         }
         else {
-            News currentNews = storage.getLastSavedNews();
-            resultTextView.setText(currentNews.getTitle());
+
         }
     }
 
     private void startRefreshService() {
-        if (requestId == 0) {
-            requestId = ServiceHelper.getInstance().getNews(this, storage.loadCurrentTopic(), this);
-        }
-        else
-            Toast.makeText(this, "There is pending request", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, NewsIntentService.class);
+        Scheduler scheduler = Scheduler.getInstance();
+        scheduler.schedule(this, intent, 60*1000L);
     }
 
     private void stopRefreshService() {
-        //Intent intent = new Intent(this, WeatherIntentService.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, NewsIntentService.class);
+        Scheduler scheduler = Scheduler.getInstance();
+        scheduler.unschedule(this, intent);
     }
 
     @Override
-    public void onNewsResult(String currentTopic) {
-        News currentNews = storage.getLastSavedNews();
-        resultTextView.setText(currentNews.getTitle());
+    public void onNewsResult(int code) {
+        if (code == NewsIntentService.RESULT_SUCCESS) {
+            News currentNews = storage.getLastSavedNews();
+            TextView titleTextView = (TextView) findViewById(R.id.title_text);
+            titleTextView.setText(currentNews.getTitle());
+            TextView dateTextView = (TextView) findViewById(R.id.date_text);
+            SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault());
+            dateTextView.setText(date.format(currentNews.getDate()));
+            TextView contentTextView = (TextView) findViewById(R.id.content_text);
+            contentTextView.setText(currentNews.getBody());
+        }
         requestId = 0;
     }
 }

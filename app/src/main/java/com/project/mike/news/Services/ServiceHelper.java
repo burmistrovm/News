@@ -7,11 +7,8 @@ package com.project.mike.news.Services;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
-import android.util.Log;
 
 import com.project.mike.news.NewsResultReceiver;
-import com.project.mike.news.NewsResultListener;
-import ru.mail.weather.lib.Topics;
 import java.util.Hashtable;
 import java.util.Map;
 import com.project.mike.news.Services.NewsIntentService;
@@ -31,14 +28,12 @@ public class ServiceHelper {
         return instance;
     }
 
-    public int getNews(final Context context, final String currentTopic, NewsResultListener listener) {
+    public int getNews(final Context context, NewsResultListener listener) {
         final NewsResultReceiver receiver = new NewsResultReceiver(idCounter, new Handler());
         receiver.setListener(listener);
         resultReceivers.put(idCounter, receiver);
         Intent intent = new Intent(context, NewsIntentService.class);
-        intent.putExtra("topic", currentTopic);
         intent.putExtra("receiver", receiver);
-        Log.d("curr", currentTopic);
         context.startService(intent);
         return idCounter++;
     }
@@ -48,5 +43,9 @@ public class ServiceHelper {
         if (receiver != null) {
             receiver.setListener(null);
         }
+    }
+
+    public interface NewsResultListener {
+        void onNewsResult(int code);
     }
 }

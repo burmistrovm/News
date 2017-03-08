@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.ResultReceiver;
 
 import com.project.mike.news.Services.NewsIntentService;
-import com.project.mike.news.NewsResultListener;
+import com.project.mike.news.Services.ServiceHelper.NewsResultListener;
 import com.project.mike.news.Services.ServiceHelper;
 
 import ru.mail.weather.lib.Storage;
@@ -22,16 +22,19 @@ public class NewsResultReceiver extends ResultReceiver {
         this.requestId = requestId;
     }
 
+    public NewsResultReceiver( final Handler handler) {
+        super(handler);
+        this.requestId = -1;
+    }
+
     public void setListener(final NewsResultListener listener) {
         newsListener = listener;
     }
 
     @Override
     protected void onReceiveResult(final int resultCode, final Bundle resultData) {
-        int success = 1;
         if (newsListener != null) {
-            String currentTopic = (resultData.getString("topic"));
-            newsListener.onNewsResult(currentTopic);
+            newsListener.onNewsResult(resultCode);
         }
         ServiceHelper.getInstance().removeListener(requestId);
     }

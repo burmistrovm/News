@@ -3,7 +3,6 @@ import android.app.IntentService;
 import android.content.Intent;
 import android.os.ResultReceiver;
 import android.util.Log;
-import android.os.Bundle;
 
 import ru.mail.weather.lib.Storage;
 import ru.mail.weather.lib.NewsLoader;
@@ -25,23 +24,20 @@ public class NewsIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        final Bundle data = new Bundle();
         loader = new NewsLoader();
         final ResultReceiver receiver = intent.getParcelableExtra("receiver");
         String currentTopic = Storage.getInstance(this).loadCurrentTopic();
         try {
-            java.util.concurrent.TimeUnit.SECONDS.sleep(5);
-        } catch (InterruptedException e) {
-
-        }
-        try {
             News news = loader.loadNews(currentTopic);
             Storage.getInstance(this).saveNews(news);
-            data.putString("topic", currentTopic);
-            receiver.send(RESULT_SUCCESS,data);
+            if (receiver != null) {
+                receiver.send(RESULT_SUCCESS, null);
+            }
         }
         catch (IOException ex) {
-            Log.d("Helper", "LoadError");
+            if (receiver != null) {
+                receiver.send(RESULT_ERROR, null);
+            }
         }
     }
 }
